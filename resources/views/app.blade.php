@@ -12,14 +12,17 @@
             </form>
         </header>
 
-        <ul class="flex flex-col gap-4 md:flex-1" id="todo-list">
-            @empty($todos)
-                <li>you have got nothing to do today.</li>
-            @endempty
+        <form hx-swap="outerHTML" class="md:flex-1" id="todo-list">
+            @csrf
+            <ol>
+                @empty($todos)
+                    <li>you have got nothing to do today.</li>
+                @endempty
 
-            @foreach ($todos as $todo)
-                <x-todo :todo="$todo" />
-            @endforeach
-        </ul>
+                @foreach ($todos as $todo)
+                    <x-todo :todo="$todo" />
+                @endforeach
+            </ol>
+        </form>
     </main>
 </x-base-layout>
