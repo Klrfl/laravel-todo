@@ -29,11 +29,8 @@ class TodoController extends Controller
             $todo->label = $request->label;
         }
 
-        if ($request->has('is_done')) {
-            $todo->is_done = $request->is_done;
-        } else {
-            $todo->is_done = $todo->is_done ? 0 : 1;
-        }
+        $todo->is_done = $request->is_done ? 0 : 1;
+
 
         $todo->saveOrFail();
 
