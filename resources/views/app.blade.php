@@ -4,12 +4,13 @@
         <p>Trying out a new tech stack.</p>
 
         <ul class="flex flex-col">
-            <li>SOme todo item</li>
-            <li>Some todo item</li>
-            <li>Some todo item</li>
-            <li>Some todo item</li>
-            <li>Some todo item</li>
-            <li>Some todo item</li>
+            @empty($todos)
+                <li>you have got nothing to do today.</li>
+            @endempty
+
+            @foreach ($todos as $todo)
+                <li>{{ $todo->label }}</li>
+            @endforeach
         </ul>
     </main>
 </x-base-layout>
