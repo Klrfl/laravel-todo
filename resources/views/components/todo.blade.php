@@ -1,4 +1,5 @@
 <li id="wrapper-{{ $todo->id }}">
+    {{-- apparently you can put attributes on the form and they will inherit --}}
     <form hx-swap="outerHTML" hx-target="#wrapper-{{ $todo->id }}">
         @csrf
         <span class="p-2 block w-full text-left bg-gray-900 dark:hover:text-neutral-200">
