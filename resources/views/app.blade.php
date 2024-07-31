@@ -9,7 +9,8 @@
                 <input type="text" placeholder="Your task here"
                     class="block w-full bg-neutral-100 dark:bg-gray-900 p-2" name="label" required>
                 <button type="submit"
-                    class="block border dark:border-gray-700 dark:hover:bg-gray-700 px-4 py-2 my-2">Add a new
+                    class="block border hover:bg-gray-200 dark:border-gray-700 dark:hover:bg-gray-700 px-4 py-2 my-2">Add
+                    a new
                     task</button>
             </form>
         </header>
