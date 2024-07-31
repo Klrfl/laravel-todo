@@ -14,7 +14,7 @@
 
         <form hx-swap="outerHTML" class="md:flex-1" id="todo-list">
             @csrf
-            <ol>
+            <ol class="flex flex-col gap-4">
                 @empty($todos)
                     <li>you have got nothing to do today.</li>
                 @endempty
